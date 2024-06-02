@@ -67,7 +67,7 @@ app.use(session({
 // });
 
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb+srv://khannayogita723:yogita@cluster0.qvjejhq.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -90,10 +90,6 @@ app.use('/api', require('./routes/PersonalDetails'));
 app.use('/api', require('./routes/BillGeneration'));
 app.use('/api', require('./routes/Feedback'));
 
-
-app.get('*', (req, res) => {
-  res.send('Backend is running');
-});
 
 
 // Start the server

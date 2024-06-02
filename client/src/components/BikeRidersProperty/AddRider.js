@@ -48,7 +48,7 @@ function BikeRiders() {
     formData.append("drivingPapers", drivingPapers);
 
     try {
-      await axios.post("/api/riders", formData);
+      await axios.post("https://two-wheeler-ashy.vercel.app/api/riders", formData);
       alert("Rider added successfully!");
       setName("");
       setLatitude("");

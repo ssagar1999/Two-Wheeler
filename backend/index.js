@@ -83,6 +83,10 @@ mongoose.connect('mongodb+srv://khannayogita723:yogita@cluster0.qvjejhq.mongodb.
 
 app.use(cors());
 // Routes
+
+app.get('/', (req, res) =>{
+res.send('kratos')
+})
 app.use('/api', bikerRoutes);
 app.use('/api', require('./routes/auth'));
 app.use('/api', require('./routes/contactDetails'));
